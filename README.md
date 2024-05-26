@@ -13,5 +13,6 @@ The [DataForSEO SERP API](https://docs.dataforseo.com/v3/serp/overview/) retriev
 This section lists the different stages of the Apps Script and the prompts used with ChatGPT 3.5 to generate the script.
 
 ```bash
-# link to be added
+# Version 1
+[ChatGPT Prompt 1](https://chatgpt.com/share/74c30d8f-7b4e-4c97-beeb-750bf03a5b9e)
 ```
