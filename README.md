@@ -4,7 +4,7 @@ The [DataForSEO SERP API](https://docs.dataforseo.com/v3/serp/overview/) retriev
 ## Usage
 * Create a new Google Sheet, e.g. with writing "script.new" in your address bar.
 * Create 2 tabs "DataForSEO Settings" and "DataForSEO Output" with the same format as in: http://bit.ly/dept-wtsfest-berlin
-* Go to Extensions > Apps Script and add the latest version of the script:[dataforseo-serp-api.js](https://github.com/johanna-maier/dataforseo-serp-api/blob/main/dataforseo-serp-api.js)
+* Go to Extensions > Apps Script and add the latest version of the script: [dataforseo-serp-api.js](https://github.com/johanna-maier/dataforseo-serp-api/blob/main/dataforseo-serp-api.js)
 * Save the script and reload the sheet.
 * Add your keywords, select your SERP country, language and device.
 * You can run the script with the menu bottom "🚀 Fetch SERP Data".
@@ -34,4 +34,4 @@ This section lists the different stages of the Apps Script and the prompts used 
 
 * Version 6
   * [ChatGPT Prompt 5 & 6](https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818)
-  * [Apps Script 6]()
+  * [Apps Script 6](https://github.com/johanna-maier/dataforseo-serp-api/commit/a990f3ed5de9aa9021ed3e459e8c2fb8586049a9)
