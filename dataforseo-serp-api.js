@@ -11,7 +11,7 @@ function fetchDataForSEO() {
   var languageName = settingsSheet.getRange("B3").getValue();
   var countryCode = settingsSheet.getRange("C2").getValue();
   var languageCode = settingsSheet.getRange("C3").getValue();
-
+  var device = settingsSheet.getRange("B4").getValue();
 
   // Write headers to output sheet if it's empty
   if (outputSheet.getLastRow() == 0) {
@@ -24,7 +24,7 @@ function fetchDataForSEO() {
     var checkbox = checkboxes[i][1];
 
     if (checkbox === "" || checkbox.toLowerCase() !== "=true") {
-      var responseData = fetchSERPData(query, countryCode, languageCode, countryName, languageName);
+      var responseData = fetchSERPData(query, countryCode, languageCode, countryName, languageName, device);
 
       // Write data to output sheet
       outputSheet.appendRow([query, countryName, languageName, device, responseData.join(",")]);
@@ -35,7 +35,7 @@ function fetchDataForSEO() {
   }
 }
 
-function fetchSERPData(query, countryCode, languageCode, countryName, languageName) {
+function fetchSERPData(query, countryCode, languageCode, countryName, languageName, device) {
   var apiUrl = 'https://api.dataforseo.com/v3/serp/google/organic/live/advanced';
   var username = ''; // Replace with your DataForSEO username
   var password = ''; // Replace with your DataForSEO password
