@@ -4,9 +4,8 @@ function fetchDataForSEO() {
   var outputSheet = ss.getSheetByName("DataForSEO Output");
 
   // Get settings from settings sheet
-  var range = settingsSheet.getRange("A6:B");
+  var range = settingsSheet.getRange("A6:B" + settingsSheet.getLastRow());
   var values = range.getValues();
-  var checkboxes = range.getFormulas();
   var countryName = settingsSheet.getRange("B2").getValue();
   var languageName = settingsSheet.getRange("B3").getValue();
   var countryCode = settingsSheet.getRange("C2").getValue();
@@ -21,16 +20,13 @@ function fetchDataForSEO() {
   // Iterate through each query
   for (var i = 0; i < values.length; i++) {
     var query = values[i][0];
-    var checkbox = checkboxes[i][1];
+    var checkbox = values[i][1];
 
-    if (checkbox === "" || checkbox.toLowerCase() !== "=true") {
+    if (query && !checkbox) {
       var responseData = fetchSERPData(query, countryCode, languageCode, countryName, languageName, device);
 
       // Write data to output sheet
       outputSheet.appendRow([query, countryName, languageName, device, responseData.join(",")]);
-
-      // Update checkbox to mark as processed
-      range.getCell(i + 1, 2).setValue(true);
     }
   }
 }
