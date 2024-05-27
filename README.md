@@ -7,7 +7,7 @@ The [DataForSEO SERP API](https://docs.dataforseo.com/v3/serp/overview/) retriev
 * Go to Extensions > Apps Script and add the latest version of the script: [dataforseo-serp-api.js](https://github.com/johanna-maier/dataforseo-serp-api/blob/main/dataforseo-serp-api.js)
 * Save the script and reload the sheet.
 * Add your keywords, select your SERP country, language and device.
-* You can run the script with the menu bottom "🚀 Fetch SERP Data".
+* You can run the script with the menu buttons "🚀 DataForSEO > Fetch SERP Data".
 
 ## Apps Script Versions & ChatGPT Prompts
 This section lists the different stages of the Apps Script and the prompts used with ChatGPT 3.5 to generate the script.
@@ -34,4 +34,5 @@ The ChatGPT link does not support jumpmarks to the respective prompt, but the pr
   * [Apps Script 5](https://github.com/johanna-maier/dataforseo-serp-api/commit/e783992de73bb557aaae046596ac0d42c1cdd8a5)
 
 * Version 6
+  * ChatGPT Prompts 7 in: [https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818](https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818)
   * [Apps Script 6](https://github.com/johanna-maier/dataforseo-serp-api/commit/a990f3ed5de9aa9021ed3e459e8c2fb8586049a9)
