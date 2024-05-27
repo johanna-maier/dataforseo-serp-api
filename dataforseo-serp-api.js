@@ -4,10 +4,14 @@ function fetchDataForSEO() {
   var outputSheet = ss.getSheetByName("DataForSEO Output");
 
   // Get settings from settings sheet
-  var queries = settingsSheet.getRange("A6:A").getValues().flat().filter(String);
+  var range = settingsSheet.getRange("A6:B");
+  var values = range.getValues();
+  var checkboxes = range.getFormulas();
   var countryName = settingsSheet.getRange("B2").getValue();
   var languageName = settingsSheet.getRange("B3").getValue();
-  var device = settingsSheet.getRange("B4").getValue();
+  var countryCode = settingsSheet.getRange("C2").getValue();
+  var languageCode = settingsSheet.getRange("C3").getValue();
+
 
   // Write headers to output sheet if it's empty
   if (outputSheet.getLastRow() == 0) {
@@ -15,23 +19,31 @@ function fetchDataForSEO() {
   }
 
   // Iterate through each query
-  queries.forEach(function (query) {
-    var responseData = fetchSERPData(query, countryName, languageName, device);
+  for (var i = 0; i < values.length; i++) {
+    var query = values[i][0];
+    var checkbox = checkboxes[i][1];
 
-    // Write data to output sheet
-    outputSheet.appendRow([query, countryName, languageName, device, responseData.join(",")]);
-  });
+    if (checkbox === "" || checkbox.toLowerCase() !== "=true") {
+      var responseData = fetchSERPData(query, countryCode, languageCode, countryName, languageName);
+
+      // Write data to output sheet
+      outputSheet.appendRow([query, countryName, languageName, device, responseData.join(",")]);
+
+      // Update checkbox to mark as processed
+      range.getCell(i + 1, 2).setValue(true);
+    }
+  }
 }
 
-function fetchSERPData(query, countryName, languageName, device) {
+function fetchSERPData(query, countryCode, languageCode, countryName, languageName) {
   var apiUrl = 'https://api.dataforseo.com/v3/serp/google/organic/live/advanced';
   var username = ''; // Replace with your DataForSEO username
   var password = ''; // Replace with your DataForSEO password
 
   var payload = {
     "keyword": encodeURI(query),
-    "language_name": languageName,
-    "location_name": countryName,
+    "language_code": languageCode,
+    "location_code": countryCode,
     "device": device // Add the device information to the payload
   };
 

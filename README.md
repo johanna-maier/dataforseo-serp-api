@@ -18,3 +18,7 @@ This section lists the different stages of the Apps Script and the prompts used 
 
 * Version 2
   * [ChatGPT Prompt 2](https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818)
+  * [Apps Script 2](https://github.com/johanna-maier/dataforseo-serp-api/commit/ec8b8511aee641b6c3fb2983e248609ab1413930)
+
+* Version 3
+  * [ChatGPT Prompt 3](https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818)
