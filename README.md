@@ -34,5 +34,5 @@ The ChatGPT link does not support jumpmarks to the respective prompt, but the pr
   * [Apps Script 5](https://github.com/johanna-maier/dataforseo-serp-api/commit/e783992de73bb557aaae046596ac0d42c1cdd8a5)
 
 * Version 6
-  * ChatGPT Prompts 7 in: [https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818](https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818)
+  * ChatGPT Prompt 7 in: [https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818](https://chatgpt.com/share/2eed3664-1ed0-4b16-b566-4fe796fcc818)
   * [Apps Script 6](https://github.com/johanna-maier/dataforseo-serp-api/commit/a990f3ed5de9aa9021ed3e459e8c2fb8586049a9)
