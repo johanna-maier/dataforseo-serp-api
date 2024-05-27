@@ -1,3 +1,11 @@
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  // Create a custom menu
+  ui.createMenu('DataForSEO')
+    .addItem('🚀 Fetch SERP Data', 'fetchDataForSEO')
+    .addToUi();
+}
+
 function fetchDataForSEO() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var settingsSheet = ss.getSheetByName("DataForSEO Settings");
