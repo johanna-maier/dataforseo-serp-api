@@ -2,7 +2,7 @@
 The [DataForSEO SERP API](https://docs.dataforseo.com/v3/serp/overview/) retrieves SERP information in a structured format. The purpose of this repository is to document the steps of creating a Google Apps Script to access the API with the help of ChatGPT.
 
 ## Usage
-* Create a new Google Sheet, e.g. with writing "script.new" in your address bar.
+* Create a new Google Sheet, e.g. with writing "sheet.new" in your address bar.
 * Create 2 tabs "DataForSEO Settings" and "DataForSEO Output" with the same format as in: http://bit.ly/dept-wtsfest-berlin
 * Go to Extensions > Apps Script and add the latest version of the script: [dataforseo-serp-api.js](https://github.com/johanna-maier/dataforseo-serp-api/blob/main/dataforseo-serp-api.js)
 * Save the script and reload the sheet.
